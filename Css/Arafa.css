@@ -1,0 +1,290 @@
+.Arafa h3 {
+    margin-left: 585px;
+    font-size: 43px;
+    color: #b82828;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-size: 18px; */
+    /* color: #333; */
+    background-color: #dac8c8;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff0068;
+    width: fit-content;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .Arafa h3 {
+        margin-left: 106px;
+        font-size: 30px;
+    }
+}
+
+.Arafa p {
+    font-family: 'Cairo', sans-serif;
+    /* خط عربي أنيق */
+    font-size: 24px;
+    color: #e91e63;
+    /* وردي غامق */
+    background: linear-gradient(90deg, #ffe6eb, #fff);
+    /* خلفية ناعمة */
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 2px dashed #f06292;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
+    margin: 20px auto;
+    width: fit-content;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width: 600px) {
+    .love-text {
+        font-size: 18px;
+        padding: 12px 16px;
+        border-radius: 10px;
+    }
+}
+
+.love-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff0f5;
+    /* خلفية وردية فاتحة */
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.love-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.love-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 20, 147, 0.5);
+}
+
+@media (max-width: 600px) {
+    .mobile-gallery img {
+        max-width: 100%;
+        /* الصورة تملى عرض الشاشة تقريبا */
+    }
+}
+
+.love-banner {
+    background-image: url('images/flowers.jpg');
+    /* ← مسار صورة الورد */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.love-banner .text {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* خلفية شفافة للنص */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+}
+
+.love-banner h2 {
+    font-size: 28px;
+    color: #c2185b;
+    margin-bottom: 10px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.love-banner p {
+    font-size: 18px;
+    color: #880e4f;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* للموبايل */
+@media (max-width: 600px) {
+    .love-banner {
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .love-banner h2 {
+        font-size: 22px;
+    }
+
+    .love-banner p {
+        font-size: 16px;
+    }
+}
+
+.love-gallery video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+
+
+.birthday-show {
+    background-image: url('images/birthday-bg.jpg');
+    /* ← حط صورة عيد ميلاد */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.birthday-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 20, 147, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.birthday-text h1 {
+    font-size: 36px;
+    color: #d81b60;
+    margin-bottom: 15px;
+}
+
+.birthday-text p {
+    font-size: 20px;
+    color: #6a1b9a;
+}
+
+/* تأثير دخول */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* قلوب متحركة */
+.birthday-show::before {
+    content: "💖 🎉 💕 🎂 🎁 💞";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+    .birthday-text h1 {
+        font-size: 26px;
+    }
+
+    .birthday-text p {
+        font-size: 16px;
+    }
+}
+
+.dancing-heart {
+    font-size: 30px;
+    font-weight: bold;
+    color: #e91e63;
+    animation: dance 0.6s infinite;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* حركة رقص */
+@keyframes dance {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(-10deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(10deg) scale(1.1);
+    }
+
+    75% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.signature {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #880e4f;
+    font-family: 'Cairo', sans-serif;
+    opacity: 0.9;
+}
+
+.signature span {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    /* خط توقيع أنيق */
+    font-size: 28px;
+    color: #d81b60;
+    margin-top: 8px;
+}
